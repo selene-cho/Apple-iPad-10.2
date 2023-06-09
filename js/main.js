@@ -25,3 +25,5 @@ function showBasket() {
 function hideBasket() {
   basketEl.classList.remove('show');
 }
+
+/* HEADER - search (검색) */
