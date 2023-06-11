@@ -440,3 +440,45 @@ nav .menu li.active:hover a {
 .hero .links {
   margin-top: 30px;
 }
+
+/* POWER / Multiple Apps */
+.power {
+  margin-top: 110px;
+}
+.power .multiple-apps h1 {
+  width: 500px;
+  height: 280px;
+  background-image: url('../images/power_headline.png');
+  transform: translate(104px, 0);
+}
+.power .multiple-apps .figures {
+  height: 773px;
+}
+.power .multiple-apps figcaption {
+  width: 138px;
+  height: 46px;
+  background-image: url('../images/power_multiple_apps_caption.png');
+  transform: translate(703px, -47px);
+}
+
+/* POWER / Arcade */
+.power .arcade {
+}
+.power .arcade .figures {
+}
+.power .arcade figure {
+}
+
+.power .arcade figcaption {
+}
+
+/* POWER / Create */
+.power .create {
+}
+.power .create .figures {
+}
+.power .create figure {
+}
+
+.power .create figcaption {
+}
