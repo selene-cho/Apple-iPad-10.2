@@ -16,6 +16,11 @@ a {
   color: #1d1d1d;
   text-decoration: none;
 }
+img {
+  display: block;
+  user-select: none; /* 사용자가 텍스트 선택할 수 있는지 여부 */
+  -webkit-user-drag: none; /* 사용자의 요소 드래그 허용 여부 */
+}
 
 /* Btn */
 .btn {
