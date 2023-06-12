@@ -51,7 +51,7 @@ function showSearch() {
   });
   setTimeout(function () {
     searchInputEl.focus();
-  }, 600); /* 6초 있다가 input 요소에 focus */
+  }, 600); // 6초 있다가 input 요소에 focus
 }
 function hideSearch() {
   headerEl.classList.remove('searching');
@@ -62,7 +62,24 @@ function hideSearch() {
   searchDelayEls.reverse().forEach(function (el, index) {
     el.style.transitionDelay = (index * 0.4) / searchDelayEls.length + 's';
   });
-  searchDelayEls.reverse(); /* 다시 검색 열었을때 원래 순서로 나오게 하기위해 다시 원래대로 돌림 */
-  searchInputEl.value =
-    ''; /* input에 입력했던 것 초기화 (다시 검색창 열었을 때 기록 남지않게 하기 위함) */
+  searchDelayEls.reverse(); // 다시 검색 열었을때 원래 순서로 나오게 하기위해 다시 원래대로 돌림
+  searchInputEl.value = ''; // input에 입력했던 것 초기화 (다시 검색창 열었을 때 기록 남지않게 하기 위함)
 }
+
+/** Intersection Observer 요소의 가시성 관찰 */
+const io = new IntersectionObserver(function (entries) {
+  // 아래의 io.observe(el)를 통해 각각 요소들에 대한 관찰 정보가 entries라는 매개변수로 들어감 (배열 데이터)
+  entries.forEach(function (entry) {
+    // 배열 데이터이기 때문에 개별적으로 처리하기 위해서 forEach를 사용
+    if (!entry.isIntersecting) {
+      // 화면에 보이지 않을 때는 return 키워드로 함수를 사용하지 않음
+      return;
+    }
+    entry.target.classList.add('show'); // 화면에 보이면 target 속성을 통해서 'show'라는 클래스 추가
+  });
+});
+const infoEls = document.querySelectorAll('.info'); // info 요소 모두 찾아서 infoEls에 할당
+infoEls.forEach(function (el) {
+  // infoEls 각 요소들 forEach로 반복 함수 실행, 반복되는 info라는 클래스를 가진 요소(el)를
+  io.observe(el); // io객체의 observe를 통해 넣어줌. (intersection observer를 통해 관찰)
+});
