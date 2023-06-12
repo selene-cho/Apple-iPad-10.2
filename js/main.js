@@ -1,4 +1,4 @@
-/* HEADER - basket (장바구니) */
+/** HEADER - basket (장바구니) */
 const basketStarterEl = document.querySelector('header .basket-starter');
 const basketEl = basketStarterEl.querySelector('.basket');
 
@@ -26,7 +26,7 @@ function hideBasket() {
   basketEl.classList.remove('show');
 }
 
-/* HEADER - search (검색) */
+/** HEADER - search (검색) */
 const headerEl = document.querySelector('header');
 const headerMenuEls = [...headerEl.querySelectorAll('ul.menu > li')];
 const searchWrapEl = headerEl.querySelector('.search-wrap');
@@ -82,4 +82,22 @@ const infoEls = document.querySelectorAll('.info'); // info 요소 모두 찾아
 infoEls.forEach(function (el) {
   // infoEls 각 요소들 forEach로 반복 함수 실행, 반복되는 info라는 클래스를 가진 요소(el)를
   io.observe(el); // io객체의 observe를 통해 넣어줌. (intersection observer를 통해 관찰)
+});
+
+/** 비디오 재생 ! */
+const video = document.querySelector('.stage video');
+const playBtn = document.querySelector('.stage .controller--play');
+const pauseBtn = document.querySelector('.stage .controller--pause');
+
+// 재생 버튼 클릭
+playBtn.addEventListener('click', function () {
+  video.play(); // video 요소 찾아서 play() 자바스크립트 메소드 사용
+  playBtn.classList.add('hide'); // 재생 버튼 숨김
+  pauseBtn.classList.remove('hide'); // 일시정지 버튼 나타남
+});
+// 일시정지 버튼 클릭
+pauseBtn.addEventListener('click', function () {
+  video.pause();
+  playBtn.classList.remove('hide'); // 일시정지 버튼 숨김
+  pauseBtn.classList.add('hide'); // 재생 버튼 나타남
 });
