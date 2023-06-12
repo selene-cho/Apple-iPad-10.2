@@ -476,7 +476,7 @@ nav .menu li.active:hover a {
   color: var(--color-font);
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
   background-color: var(--color-font-lightgray);
 }
@@ -537,7 +537,7 @@ nav .menu li.active:hover a {
   margin-top: 30px;
 }
 
-/* POWER / Multiple Apps */
+/* POWER SECTION / Multiple Apps */
 .power {
   margin-top: 110px;
 }
@@ -557,7 +557,7 @@ nav .menu li.active:hover a {
   transform: translate(703px, -47px);
 }
 
-/* POWER / Arcade */
+/* POWER SECTION / Arcade */
 .power .arcade {
   margin-top: 55px;
 }
@@ -575,7 +575,7 @@ nav .menu li.active:hover a {
   transform: translate(483px, 653px);
 }
 
-/* POWER / Create */
+/* POWER SECTION / Create */
 .power .create {
   margin-top: 55px;
 }
@@ -590,6 +590,44 @@ nav .menu li.active:hover a {
   height: 46px;
   background-image: url('../images/power_create_caption.png');
   transform: translate(543px, 908px);
+}
+
+/* DISPLAY SECTION */
+.display {
+  margin-top: 450px;
+}
+/* DISPLAY SECTION / Notes */
+.display .notes h1 {
+  width: 640px;
+  height: 370px;
+  background-image: url('../images/display_headline.png');
+  transform: translate(104px, 0);
+}
+.display .notes .figures {
+  height: 814px;
+  margin-top: 26px;
+}
+.display .notes figcaption {
+  width: 145px;
+  height: 45px;
+  background-image: url('../images/display_notes_caption.png');
+  transform: translate(707px, -16px);
+}
+/* DISPLAY SECTION / Shareplay */
+.display .shareplay {
+  margin-top: 55px;
+}
+.display .shareplay .figures {
+  height: 630px;
+}
+.display .shareplay figure {
+  transform: translate(-360px, 0);
+}
+.display .shareplay figcaption {
+  width: 110px;
+  height: 48px;
+  background-image: url('../images/display_shareplay_caption.png');
+  transform: translate(300px, 658px);
 }
 
 /* animation */
