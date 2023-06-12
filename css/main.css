@@ -116,7 +116,7 @@ a.link::after {
   left: 0;
 }
 .figures figcaption * {
-  /* figcation 안에 있는 모든 요소 "*" */
+  /* figcaption 안에 있는 모든 요소 "*" */
   position: absolute;
   top: 0;
   left: 0;
@@ -839,7 +839,7 @@ nav .menu li.active:hover a {
   transform: translate(511px, 470px);
 }
 
-/* Apps */
+/* APPS SECTION */
 .apps {
   margin-top: 368px;
 }
@@ -905,6 +905,41 @@ nav .menu li.active:hover a {
   height: 26px;
   background-image: url('../images/apps_goodnotes_caption.png');
   transform: translate(24px, 690px);
+}
+
+/* PRIVACY SECTION */
+.privacy {
+  margin-top: 238px;
+}
+.privacy h1 {
+  width: 482px;
+  height: 237px;
+  margin-left: auto;
+  background-image: url('../images/privacy_headline.png');
+  position: relative;
+  z-index: 1;
+  transform: translate(57px, 0);
+}
+.privacy .infos {
+  margin-top: 38px;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+}
+.privacy figure {
+  transform: translate(-215px, -500px);
+}
+.privacy figcaption .caption-apple-id {
+  width: 170px;
+  height: 26px;
+  background-image: url('../images/privacy_caption_apple_id.png');
+  transform: translate(195px, -13px);
+}
+.privacy figcaption .caption-touch-id {
+  width: 150px;
+  height: 31px;
+  background-image: url('../images/privacy_caption_touch_id.png');
+  transform: translate(533px, 485px);
 }
 
 /* animation */
