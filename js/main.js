@@ -139,6 +139,7 @@ ipads.forEach(function (ipad) {
   // itemEl는 createElement를 통해 메모리상에서만 만들어진 것이기 때문에 실제 html인 compare section의 클래스 items라는 div 요소에 하나씩 넣어주기위해 append 메소드 사용.
 });
 
+/** FOOTER - Navigations */
 const navigationsEl = document.querySelector('footer .navigations');
 navigations.forEach(function (nav) {
   const mapEl = document.createElement('div');
@@ -162,3 +163,7 @@ navigations.forEach(function (nav) {
 
   navigationsEl.append(mapEl);
 });
+
+/** FOOTER - Legal (Copyright this-year) */
+const thisYearEl = document.querySelector('span.this-year');
+thisYearEl.textContent = new Date().getFullYear(); // 자바스크립트 class 개념. 생성자 함수 호출

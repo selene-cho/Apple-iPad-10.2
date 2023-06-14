@@ -527,6 +527,12 @@ nav .menu li.active:hover a {
   color: var(--color-font);
 }
 
+/* MAIN */
+/* main: block 요소, 가로너비 최대한 늘어날 수 있는 구조. 이 안에서 최대한 늘어나고, x축으로 넘치는 부분 잘라내겠다 */
+main {
+  overflow-x: hidden;
+}
+
 /* HERO SECTION */
 .hero {
   background-color: var(--color-font-lightgray);
@@ -1217,6 +1223,50 @@ footer .navigations .map li a {
   color: var(--color-font-darkgray);
 }
 footer .navigations .map li a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER / How-to-shop */
+footer .how-to-shop {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-font-darkgray);
+}
+footer .how-to-shop a {
+  color: var(--color-link);
+}
+footer .how-to-shop a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER / Legal */
+footer .legal {
+  margin-top: 10px;
+  padding: 10px 0 40px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 50px;
+  font-size: 12px;
+  color: var(--color-font-darkgray);
+}
+footer .legal ul {
+  flex-grow: 1;
+  display: flex;
+  gap: 21px;
+}
+footer .legal ul li {
+  position: relative;
+}
+footer .legal ul li::after {
+  content: '|';
+  position: absolute;
+  right: -11px;
+  color: var(--color-border);
+}
+footer .legal ul li:last-child:after {
+  display: none;
+}
+footer .legal ul li:hover {
   text-decoration: underline;
 }
 
