@@ -1,3 +1,5 @@
+import ipads from '../data/ipads.js';
+
 /** HEADER - basket (장바구니) */
 const basketStarterEl = document.querySelector('header .basket-starter');
 const basketEl = basketStarterEl.querySelector('.basket');
@@ -100,4 +102,38 @@ pauseBtn.addEventListener('click', function () {
   video.pause();
   playBtn.classList.remove('hide'); // 일시정지 버튼 숨김
   pauseBtn.classList.add('hide'); // 재생 버튼 나타남
+});
+
+/** 당신에게 맞는 iPad는? */
+const itemsEl = document.querySelector('section.compare .items');
+ipads.forEach(function (ipad) {
+  const itemEl = document.createElement('div');
+  itemEl.classList.add('item');
+
+  let colorList = ''; // 값 재할당 가능한 변수에 let 키워드 사용
+  ipad.colors.forEach(function (color) {
+    colorList += `<li style="background-color: ${color};"></li>`;
+  });
+
+  itemEl.innerHTML = /* html */ `
+    <div class="thumbnail">
+      <img src="${ipad.thumbnail}" alt="${ipad.name}" />
+    </div>
+    <ul class="colors">
+      ${colorList}
+    </ul>
+    <h3 class="name">${ipad.name}</h3>
+    <p class="tagline">${ipad.tagline}</p>
+    <p class="price">₩${ipad.price.toLocaleString('en-US')}부터</p>
+    <button class="btn">구입하기</button>
+    <a href="${ipad.url}" class="link">더 알아보기</a>
+  `;
+  // template literal : `(백틱)기호 사용해서 문자 데이터 작성
+  // ipad.name을 item이라는 클래스를 가지는 div태그의 텍스트로 넣어줌
+  // textContent : 글자 내용 _ 어떤값을 요소 내부에 추가
+  // innerHTML : 삽입하는 문자를 실제 HTML 구조로 내부에 삽입
+  // toLocaleString('en-US') : '지역 이름' / 미국에서 숫자를 표현하는 형식으로 바꿔줌
+
+  itemsEl.append(itemEl);
+  // itemEl는 createElement를 통해 메모리상에서만 만들어진 것이기 때문에 실제 html인 compare section의 클래스 items라는 div 요소에 하나씩 넣어주기위해 append 메소드 사용.
 });

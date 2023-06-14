@@ -39,7 +39,8 @@
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="./css/main.css" />
     <!-- JS 연결 -->
-    <script defer src="./js/main.js"></script>
+    <!-- import 키워드 사용한 js파일을 module이라고 함. 모듈화한 js파일을 html에서 사용하려면 type속성에 module을 등록 해줘야함. 안그려면 import해도 사용 불가 -->
+    <script defer type="module" src="./js/main.js"></script>
   </head>
 
   <body>
@@ -739,6 +740,24 @@
             일이죠.
           </p>
           <a href="javascript:void(0)" class="link">보상 판매 가격 알아보기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- iPad - COMPARE -->
+    <section class="compare">
+      <div class="whitebox">
+        <div class="inner">
+          <h1>당신에게 맞는 iPad는?</h1>
+          <div class="items">
+            <!-- JS -->
+          </div>
+          <div class="links">
+            <a href="javascript:void(0)" class="link"
+              >모든 iPad 모델 비교하기</a
+            >
+            <a href="javascript:void(0)" class="link">iPad 쇼핑하기</a>
+          </div>
         </div>
       </div>
     </section>
