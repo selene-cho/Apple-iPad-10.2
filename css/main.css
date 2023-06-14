@@ -37,6 +37,11 @@ img {
 p {
   line-height: 1.6;
 }
+sup {
+  margin-right: 6px;
+  font-size: 0.7em; /* em : 부모 요소에서 상속받은 비율 (70%) */
+  vertical-align: top; /* 글자 수직 정렬 윗쪽에 맞춤 */
+}
 
 /* Inner */
 .inner {
@@ -1102,6 +1107,8 @@ nav .menu li.active:hover a {
 footer {
   background-color: var(--color-section);
 }
+
+/* FOOTER / Buy-info */
 footer .buy-info {
   padding: 76px 0;
   display: flex;
@@ -1125,6 +1132,24 @@ footer .buy-info p {
 }
 footer .buy-info a.link {
   font-size: 14px;
+}
+/* FOOTER / Buy-info */
+footer .warning {
+  padding: 18px 0 10px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+footer .warning ol {
+  list-style: decimal; /* reset css로 브라우저에서 제공하는 모든 기본 스타일 제거해줬기 때문에
+  -> ol태그에 의도적으로 숫자가 앞에 붙을 수 있는 스타일 추가해줘야 함.
+  -> ol태그 내부에 있는 li태그 앞에 10진수로 숫자 붙음 */
+  padding-left: 16px;
+}
+footer .warning li {
+  margin-bottom: 10px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--color-font-darkgray);
 }
 
 /* animation */
