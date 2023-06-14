@@ -1133,7 +1133,7 @@ footer .buy-info p {
 footer .buy-info a.link {
   font-size: 14px;
 }
-/* FOOTER / Buy-info */
+/* FOOTER / Warning */
 footer .warning {
   padding: 18px 0 10px;
   border-top: 1px solid var(--color-border);
@@ -1150,6 +1150,41 @@ footer .warning li {
   font-size: 11px;
   line-height: 1.5;
   color: var(--color-font-darkgray);
+}
+
+/* FOOTER / Breadcrumbs */
+footer .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+footer .breadcrumbs a {
+  font-size: 12px;
+  color: var(--color-font-darkgray);
+  position: relative;
+}
+footer .breadcrumbs a.apple-logo {
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/path_apple.svg');
+}
+footer .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+footer .breadcrumbs a::after {
+  content: '';
+  width: 8px;
+  height: 18px;
+  background-image: url('../images/path_div.svg');
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -18px;
+  margin: auto;
+}
+footer .breadcrumbs a:last-child::after {
+  display: none;
 }
 
 /* animation */
