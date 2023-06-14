@@ -1,4 +1,5 @@
 import ipads from '../data/ipads.js';
+import navigations from '../data/navigations.js';
 
 /** HEADER - basket (장바구니) */
 const basketStarterEl = document.querySelector('header .basket-starter');
@@ -136,4 +137,28 @@ ipads.forEach(function (ipad) {
 
   itemsEl.append(itemEl);
   // itemEl는 createElement를 통해 메모리상에서만 만들어진 것이기 때문에 실제 html인 compare section의 클래스 items라는 div 요소에 하나씩 넣어주기위해 append 메소드 사용.
+});
+
+const navigationsEl = document.querySelector('footer .navigations');
+navigations.forEach(function (nav) {
+  const mapEl = document.createElement('div');
+  mapEl.classList.add('map');
+
+  let mapList = '';
+  nav.maps.forEach(function (map) {
+    mapList += /* html */ `<li>
+      <a href="${map.url}">${map.name}</a>
+    </li>`;
+  });
+
+  mapEl.innerHTML = /* html */ `
+  <h3>
+    <span class="text">${nav.title}</span>
+  </h3>
+  <ul>
+    ${mapList}
+  </ul>
+  `;
+
+  navigationsEl.append(mapEl);
 });

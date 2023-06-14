@@ -1187,6 +1187,39 @@ footer .breadcrumbs a:last-child::after {
   display: none;
 }
 
+/* FOOTER / Navigations */
+footer .navigations {
+  margin-bottom: 40px;
+  height: 344px;
+  display: flex;
+  /* column으로 세로 정렬하되, 지정된 높이를 넘어가면 다음 줄로 넘어가도록 해서, 두 가지 title이 한 줄에 올 수도 있게 함 */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  /* align-content: flex-wrap을 사용해서 여러 줄인 상태에서 각각의 교차축 정렬 (align-items: 한 줄에서의 교차축 정렬) */
+}
+footer .navigations .map {
+  margin-top: 24px;
+}
+footer .navigations .map:nth-child(6) {
+  /* 비즈니스, 교육 두개만 한줄에 오도록 패딩값 임의로 많이 넣어줌 */
+  padding-bottom: 100px;
+}
+footer .navigations .map h3 {
+  font-size: 12px;
+  font-weight: 600;
+}
+footer .navigations .map li {
+  margin-top: 12px;
+  font-size: 12px;
+}
+footer .navigations .map li a {
+  color: var(--color-font-darkgray);
+}
+footer .navigations .map li a:hover {
+  text-decoration: underline;
+}
+
 /* animation */
 @keyframes sprite-icon {
   /* 1~10 */
