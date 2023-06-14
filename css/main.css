@@ -971,7 +971,7 @@ nav .menu li.active:hover a {
   transform: translate(533px, 485px);
 }
 
-/* Accessibility */
+/* ACCESSIBILITY SECTION */
 .accessibility {
   margin-top: 266px;
   margin-bottom: 170px;
@@ -988,7 +988,7 @@ nav .menu li.active:hover a {
   transform: translate(470px, -620px);
 }
 
-/* AR */
+/* AR SECTION */
 .ar {
   background-color: var(--color-section);
   padding: 20px 20px 0;
@@ -1005,7 +1005,7 @@ nav .menu li.active:hover a {
   margin-right: 90px;
 }
 
-/* ENVIRONMENT */
+/* ENVIRONMENT SECTION */
 .environment {
   padding: 20px 20px 0;
   background-color: var(--color-section);
@@ -1019,7 +1019,7 @@ nav .menu li.active:hover a {
   color: #03a10e;
 }
 
-/* ACCESSORY SHOP */
+/* ACCESSORY SHOP SECTION */
 .accessory-shop {
   background-color: var(--color-section);
   text-align: center;
@@ -1035,14 +1035,14 @@ nav .menu li.active:hover a {
 .accessory-shop img {
   margin-top: 50px;
 }
-/* TRADE */
+/* TRADE SECTION */
 .trade {
   padding: 20px 20px 0;
   background-color: var(--color-section);
   text-align: center;
 }
 
-/* COMPARE */
+/* COMPARE SECTION */
 .compare {
   padding: 20px 20px 0;
   background-color: var(--color-section);
@@ -1095,6 +1095,35 @@ nav .menu li.active:hover a {
   margin: 0 auto 14px;
 }
 .compare .item a.link {
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color-section);
+}
+footer .buy-info {
+  padding: 76px 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  text-align: center;
+}
+footer .buy-info .icon {
+  width: 56px;
+  height: 65px;
+  margin: 0 auto 10px;
+}
+footer .buy-info h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+footer .buy-info p {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+footer .buy-info a.link {
   font-size: 14px;
 }
 
