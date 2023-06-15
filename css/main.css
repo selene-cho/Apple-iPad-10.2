@@ -1223,6 +1223,82 @@ main {
   background-image: url('../images/display_shareplay_caption.png');
   transform: translate(300px, 658px);
 }
+/* 태블릿 모드 */
+@media (max-width: 1000px) {
+  .display {
+    margin-top: 180px;
+  }
+  .display .notes h1 {
+    width: 400px;
+    height: 240px;
+    transform: translate(120px, 0);
+  }
+  .display .notes .figures {
+    height: 530px;
+  }
+  .display .notes figure {
+    transform: translate(80px, -10px);
+  }
+  .display .notes figure img {
+    width: 676px;
+  }
+  .display .notes figcaption {
+    transform: scale(0.8) translate(540px, -34px);
+  }
+  .display .shareplay .figures {
+    height: 330px;
+  }
+  .display .shareplay figure {
+    transform: translate(-178px, 0);
+  }
+  .display .shareplay figure img {
+    width: 682px;
+  }
+  .display .shareplay figcaption {
+    transform: scale(0.8) translate(261px, 540px);
+  }
+}
+
+/* 모바일 모드 */
+@media (max-width: 740px) {
+  .display .notes h1 {
+    width: 290px;
+    height: 308px;
+    background-image: url('../images/display_headline_mobile.png');
+    transform: none;
+    margin: 0 auto;
+  }
+  .display .notes .figures {
+    height: auto;
+    margin-top: 60px;
+  }
+  .display .notes figure {
+    transform: translate(20px 0);
+  }
+  .display .notes figure img {
+    width: 458px;
+  }
+  .display .notes figcaption {
+    transform: scale(0.8) translate(220px, -45px);
+  }
+  .display .shareplay {
+    margin-top: 30px;
+  }
+  .display .shareplay .figrues {
+    height: auto;
+    opacity: 1;
+  }
+  .display .shareplay figure {
+    transform: translate(20px 0);
+  }
+  .display .shareplay figure img {
+    width: 460px;
+  }
+  .display .shareplay figcaption {
+    transform: scale(0.8) translate(261px, 358px);
+  }
+}
+
 /* CAMERA SECTION */
 .camera {
   margin-top: 303px;
@@ -1297,6 +1373,103 @@ main {
   background-image: url('../images/camera_edit_caption.png');
   transform: translate(27px, 905px);
 }
+/* 태블릿 모드 */
+@media (max-width: 1000px) {
+  .camera {
+    margin-top: 165px;
+  }
+  .camera .stage h1 {
+    width: 405px;
+    height: 270px;
+    transform: translate(0, 0);
+  }
+  .camera .stage .info {
+    top: 0;
+  }
+  .camera .stage .figrues {
+    height: 500px;
+  }
+  .camera .stage figure img {
+    width: 678px;
+  }
+  .camera .stage video {
+    top: 23px;
+    left: 50px;
+    transform: scale(0.65);
+    transform-origin: 0 0;
+  }
+  .camera .stage .controller--play,
+  .camera .stage .controller--pause {
+    transform: translate(276px, -88px) rotate(-3deg);
+  }
+  .camera .stage figcaption {
+    transform: scale(0.8) translate(-136px, 306px);
+  }
+  .camera .edit .figures {
+    height: auto;
+  }
+  .camera .edit figure {
+    transform: translate(40px, 0);
+  }
+  .camera .edit figure img {
+    width: 509px;
+  }
+  .camera .edit figcaption {
+    transform: scale(0.8) translate(27px, 742px);
+  }
+}
+
+/* 모바일 모드 */
+@media (max-width: 740px) {
+  .camera {
+    margin-top: 120px;
+  }
+  .camera .stage h1 {
+    width: 304px;
+    height: 350px;
+    background-image: url('../images/camera_headline_mobile.png');
+    margin: 0 auto;
+  }
+  .camera .stage .info {
+    position: static;
+    margin-top: 30px;
+  }
+  .camera .stage .figures {
+    height: auto;
+    margin-top: 64px;
+  }
+  .camera .stage figure {
+    transform: translate(20px, 0);
+  }
+  .camera .stage figure img {
+    width: 450px;
+  }
+  .camera .stage video {
+    transform: scale(0.43);
+    top: 15px;
+    left: 33px;
+  }
+  .camera .stage .controller--play,
+  .camera .stage .controller--pause {
+    transform: translate(169px, -51px) rotate(-3deg);
+  }
+  .camera .stage figcaption {
+    width: 175px;
+    height: 43px;
+    background-image: url('../images/camera_hardware_caption_mobile.png');
+    transform: scale(1) translate(110px, -40px);
+  }
+  .camera .edit .figures {
+    margin-top: 30px;
+  }
+  .camera .edit figure img {
+    width: 343px;
+  }
+  .camera .edit figcaption {
+    transform: scale(0.8) translate(27px, 502px);
+  }
+}
+
 /* WIRELESS SECTION */
 .wireless {
   margin-top: 202px;
@@ -1331,6 +1504,10 @@ main {
   background-image: url('../images/wireless_files_caption.png');
   transform: translate(96px, 639px);
 }
+/* 모바일 모드 */
+@media (max-width: 740px) {
+}
+
 /* ACCESSORIES SECTION */
 .accessories {
   margin-top: 195px;
@@ -1364,6 +1541,9 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+/* 모바일 모드 */
+@media (max-width: 740px) {
 }
 
 /* iPadOS */
