@@ -264,6 +264,7 @@ header {
   background-color: var(--color-header);
   position: relative;
   z-index: 9;
+  transition: 0.4s;
 }
 header .inner {
   max-width: 1020px;
@@ -547,6 +548,25 @@ header.searching .search .autocompletes li {
   header .search .textfield {
     border-radius: 10px;
     background-color: #1d1d1d;
+    width: 100%; /* auto 값 (block요소: 최대한 늘어나는 속성)을 특정 너비로 바꿔 주어야 자연스럽게 줄어듦 */
+    transition: 0.2s;
+  }
+  header .search .search-closer {
+    display: none;
+  }
+  header .search .search-canceler {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    color: var(--color-link);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.4s;
+    visibility: none;
+    opacity: 0;
   }
   header .search input,
   header .search .search-icon,
@@ -560,6 +580,8 @@ header.searching .search .autocompletes li {
     background-color: transparent;
     visibility: hidden;
     opacity: 0;
+    transition: 0.3s;
+    transform: translate(0, -100px);
   }
   header .search .autocompletes ul li {
     border-bottom: 1px solid var(--color-header);
@@ -632,6 +654,26 @@ header.searching .search .autocompletes li {
     visibility: visible;
     opacity: 1;
     transform: translate(0, 0);
+  }
+  header.menuing.searching--mobile {
+    transform: translate(0, -30px);
+  }
+  header.menuing.searching--mobile .search .textfield {
+    width: calc(100% - 55px);
+  }
+  header.menuing.searching--mobile .search .autocompletes {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  header.menuing.searching--mobile .search .search-canceler {
+    visibility: visible;
+    opacity: 1;
+  }
+  header.menuing.searching--mobile .clone-menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, 100px);
   }
 }
 

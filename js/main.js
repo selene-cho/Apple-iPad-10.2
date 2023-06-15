@@ -40,7 +40,10 @@ const searchInputEl = searchWrapEl.querySelector('input');
 const searchDelayEls = [...searchWrapEl.querySelectorAll('li')];
 
 searchStarterEl.addEventListener('click', showSearch);
-searchCloserEl.addEventListener('click', hideSearch);
+searchCloserEl.addEventListener('click', function (event) {
+  event.stopPropagation(); // textfield 동시에 클릭 되는 것 막기 위함.
+  hideSearch;
+});
 searchShadowEl.addEventListener('click', hideSearch);
 
 function showSearch() {
@@ -80,10 +83,34 @@ const menuStarterEl = document.querySelector('header .menu-starter');
 menuStarterEl.addEventListener('click', function () {
   if (headerEl.classList.contains('menuing')) {
     headerEl.classList.remove('menuing');
+    searchInputEl.value = ''; // 헤더 메뉴 토글 종료되면 검색 바 초기화
     playScroll();
   } else {
     headerEl.classList.add('menuing');
     stopScroll();
+  }
+});
+
+/** HEADER - Search */
+const searchTextFieldEl = document.querySelector('header .textfield');
+const searchCancelEl = document.querySelector('header .search-canceler');
+searchTextFieldEl.addEventListener('click', function () {
+  headerEl.classList.add('searching--mobile');
+  searchInputEl.focus();
+});
+searchCancelEl.addEventListener('click', function () {
+  headerEl.classList.remove('searching--mobile');
+});
+
+/* 켜져있는 검색 바 사이즈 화면 사이즈 바뀔 때 없애 주기 */
+window.addEventListener('resize', function () {
+  // 화면 전체 크기 바뀔 때마다 콜백함수 실행
+  if (window.innerWidth <= 740) {
+    // 모바일 모드 일때. (innerWidth: 화면의 가로 너비 정보)
+    headerEl.classList.remove('searching');
+  } else {
+    // 태블릿 모드, 데스크탑 모드 일때.
+    headerEl.classList.remove('searching--mobile');
   }
 });
 
