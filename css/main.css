@@ -267,7 +267,7 @@ a.link::after {
   .info {
     max-width: 230px;
   }
-  .infos--large {
+  .infos--large .info {
     max-width: 288px;
   }
   .info .icon {
@@ -288,7 +288,7 @@ a.link::after {
     max-width: none;
     padding: 0 20px;
   }
-  .infos--large {
+  .infos--large .info {
     max-width: none;
   }
   .info a.link {
@@ -1703,6 +1703,100 @@ main {
   height: 97px;
   background-image: url('../images/ipados_quick_note_caption.png');
   transform: translate(511px, 470px);
+}
+
+/* 태블릿 모드 */
+@media (max-width: 1000px) {
+  .ipados {
+    margin-top: 100px;
+  }
+  .ipados h1 {
+    width: 357px;
+    height: 274px;
+    margin: 0;
+  }
+  .ipados .infos {
+    margin-top: -98px;
+  }
+  .ipados .figures {
+    height: 520px;
+  }
+  .ipados .figure-split-view figure {
+    transform: translate(-17px, -187px);
+  }
+  .ipados .figure-split-view figure img {
+    width: 441px;
+  }
+  .ipados .figure-split-view figcaption {
+    transform: scale(0.8) translate(30px, -50px);
+  }
+  .ipados .figure-widgets figure {
+    transform: translate(180px, 3px);
+  }
+  .ipados .figure-widgets figure img {
+    width: 441px;
+  }
+  .ipados .figure-widgets figcaption {
+    transform: scale(0.8) translate(152px, 345px);
+  }
+  .ipados .figure-quick-note figure {
+    transform: translate(-346px, 119px);
+  }
+  .ipados .figure-quick-note figure img {
+    width: 333px;
+  }
+  .ipados .figure-quick-note figcaption {
+    transform: scale(0.8) translate(350px, 310px);
+  }
+}
+/* 모바일 모드 */
+@media (max-width: 740px) {
+  .ipados h1 {
+    width: 300px;
+    height: 227px;
+    margin: 0 auto;
+  }
+  .ipados .infos {
+    margin-top: 30px;
+  }
+  .ipados .figures {
+    display: block;
+    height: auto;
+  }
+  .ipados .figures > div {
+    display: flex;
+    justify-content: center;
+  }
+  .ipados .figure-split-view figure {
+    transform: translate(64px, 55px);
+  }
+  .ipados .figure-split-view figure img {
+    width: 370px;
+  }
+  .ipados .figure-split-view figcaption {
+    transform: scale(0.8) translate(39px, -55px);
+  }
+  .ipados .figure-widgets figure {
+    transform: translate(-19px, 34px);
+  }
+  .ipados .figure-widgets figure img {
+    width: 375px;
+  }
+  .ipados .figure-widgets figcaption {
+    transform: scale(0.8) translate(252px, 287px);
+  }
+  .ipados .figure-quick-note figure {
+    transform: translate(35px, 46px);
+  }
+  .ipados .figure-quick-note figure img {
+    width: 283px;
+  }
+  .ipados .figure-quick-note figcaption {
+    width: 76px;
+    height: 88px;
+    background-image: url('../images/ipados_quick_note_caption_mobile.png');
+    transform: scale(1) translate(-65px, 250px);
+  }
 }
 
 /* APPS SECTION */
