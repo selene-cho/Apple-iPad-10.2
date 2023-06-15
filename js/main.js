@@ -45,7 +45,7 @@ searchShadowEl.addEventListener('click', hideSearch);
 
 function showSearch() {
   headerEl.classList.add('searching');
-  document.documentElement.classList.add('fixed'); // documentElement : document의 최상위 element를 뜻함 = html
+  stopScroll();
   headerMenuEls.reverse().forEach(function (el, index) {
     el.style.transitionDelay = (index * 0.4) / headerMenuEls.length + 's';
   });
@@ -58,7 +58,7 @@ function showSearch() {
 }
 function hideSearch() {
   headerEl.classList.remove('searching');
-  document.documentElement.classList.remove('fixed');
+  playScroll();
   headerMenuEls.reverse().forEach(function (el, index) {
     el.style.transitionDelay = (index * 0.4) / headerMenuEls.length + 's';
   });
@@ -68,6 +68,24 @@ function hideSearch() {
   searchDelayEls.reverse(); // 다시 검색 열었을때 원래 순서로 나오게 하기위해 다시 원래대로 돌림
   searchInputEl.value = ''; // input에 입력했던 것 초기화 (다시 검색창 열었을 때 기록 남지않게 하기 위함)
 }
+function playScroll() {
+  document.documentElement.classList.remove('fixed');
+}
+function stopScroll() {
+  document.documentElement.classList.add('fixed'); // documentElement : document의 최상위 element를 뜻함 = html
+}
+
+/** HEADER - Menu Toggle */
+const menuStarterEl = document.querySelector('header .menu-starter');
+menuStarterEl.addEventListener('click', function () {
+  if (headerEl.classList.contains('menuing')) {
+    headerEl.classList.remove('menuing');
+    playScroll();
+  } else {
+    headerEl.classList.add('menuing');
+    stopScroll();
+  }
+});
 
 /** Intersection Observer 요소의 가시성 관찰 */
 const io = new IntersectionObserver(function (entries) {
