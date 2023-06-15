@@ -2201,9 +2201,9 @@ main {
 }
 /* 태블릿 모드 */
 @media (max-width: 1000px) {
-}
-/* 모바일 모드 */
-@media (max-width: 740px) {
+  .environment p br {
+    display: none;
+  }
 }
 
 /* ACCESSORY SHOP SECTION */
@@ -2224,9 +2224,9 @@ main {
 }
 /* 태블릿 모드 */
 @media (max-width: 1000px) {
-}
-/* 모바일 모드 */
-@media (max-width: 740px) {
+  .accessory-shop img {
+    width: 960px;
+  }
 }
 
 /* TRADE SECTION */
@@ -2237,9 +2237,9 @@ main {
 }
 /* 태블릿 모드 */
 @media (max-width: 1000px) {
-}
-/* 모바일 모드 */
-@media (max-width: 740px) {
+  .trade p br {
+    display: none;
+  }
 }
 
 /* COMPARE SECTION */
@@ -2299,9 +2299,31 @@ main {
 }
 /* 태블릿 모드 */
 @media (max-width: 1000px) {
+  .compare .items {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 68px auto 34px;
+  }
 }
 /* 모바일 모드 */
 @media (max-width: 740px) {
+  .compare .whitebox {
+    max-width: 430px;
+  }
+  .compare .items {
+    max-width: 190px;
+  }
+  .compare .item {
+    border-bottom: none;
+  }
+  .compare .links {
+    padding-top: 40px;
+    border-top: 1px solid var(--color-border);
+  }
+  .compare a.link {
+    margin-top: 0;
+  }
 }
 
 /* FOOTER */
